@@ -1,8 +1,9 @@
 const express= require("express");
 let app= express();
 const mongoose=require("mongoose");
-
+const helmet=require("helmet")
 app.use(express.json());
+app.use(helmet());
 
 
 //we can also use .env file by require dotenv
